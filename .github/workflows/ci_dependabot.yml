@@ -1,0 +1,30 @@
+---
+name: ci_dependabot
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  dependabot-autoapprove:
+    name: Auto Approve a PR by dependabot
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto approve
+        uses: hmarr/auto-approve-action@v2.0.0
+        if: github.event.pull_request.user.login == 'dependabot[bot]' || github.event.pull_request.user.login == 'dependabot-preview[bot]'
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+  dependabot-automerge:
+    name: Auto merge after successful checks
+    needs: dependabot-autoapprove
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto merge
+        uses: pascalgn/automerge-action@c6f2699cc4c19ea7ce7f560dbebd85565b744377
+        if: github.event.pull_request.user.login == 'dependabot[bot]' || github.event.pull_request.user.login == 'dependabot-preview[bot]'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MERGE_LABELS: dependencies
+          MERGE_METHOD: rebase

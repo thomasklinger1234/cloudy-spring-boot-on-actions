@@ -1,0 +1,25 @@
+---
+# dependabot (native) configuration file (see https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/configuration-options-for-dependency-updates)
+
+version: 2
+updates:
+- package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+        interval: weekly
+        time: "13:00"
+        timezone: Europe/Berlin
+    open-pull-requests-limit: 20
+    labels:
+        - dependencies
+        - automerge
+- package-ecosystem: maven
+    directory: "/"
+    schedule:
+        interval: weekly
+        time: "13:00"
+        timezone: Europe/Berlin
+    open-pull-requests-limit: 20
+    labels:
+        - dependencies
+        - automerge

@@ -1,0 +1,160 @@
+---
+repository:
+  # See https://developer.github.com/v3/repos/#edit for all available settings.
+
+  # Either `true` to make the repository private, or `false` to make it public.
+  # DO NOT CHANGE
+  private: true
+
+  # Either `true` to enable issues for this repository, `false` to disable them.
+  has_issues: true
+
+  # Either `true` to enable the wiki for this repository, `false` to disable it.
+  has_wiki: true
+
+  # Either `true` to enable downloads for this repository, `false` to disable them.
+  has_downloads: true
+
+  # Updates the default branch for this repository.
+  default_branch: main
+
+  # Either `true` to allow squash-merging pull requests, or `false` to prevent
+  # squash-merging.
+  allow_squash_merge: true
+
+  # Either `true` to allow merging pull requests with a merge commit, or `false`
+  # to prevent merging pull requests with merge commits.
+  allow_merge_commit: true
+
+  # Either `true` to allow rebase-merging pull requests, or `false` to prevent
+  # rebase-merging.
+  allow_rebase_merge: true
+
+# Labels: define labels for Issues and Pull Requests
+labels:
+    - name: automation
+      description: Issues created by automation
+      color: e0ab6b
+    - name: category/application
+      description: Issues related to the application
+      color: 5319e7
+    - name: category/architecture
+      description: Issues related to architectural decisions and improvements
+      color: d3704c
+    - name: category/automation
+      description: Issues related to automation
+      color: d93f0b
+    - name: category/availability
+      description: Issues related to availability
+      color: f9f3a9
+    - name: category/cicd
+      description: Issues related to software delivery decisions and improvements
+      color: fff023
+    - name: category/code-quality
+      description: Issues related to code quality
+      color: e8cc8f
+    - name: category/configuration
+      description: Issues related to configuration
+      color: 7f91f9
+    - name: category/cost
+      description: Issues related to cost optimization
+      color: 99fc9b
+    - name: category/dependencies
+      description: Issues related to software dependencies
+      color: 2f06a8
+    - name: category/documentation
+      description: Issues related to documentation
+      color: '931322'
+    - name: category/dogfooding
+      description: Issues related to using our own tools
+      color: d4c5f9
+    - name: category/infrastructure
+      description: Issues related to infrastructure
+      color: c5def5
+    - name: category/observability
+      description: Issues related to observablity (logging, monitoring, alerting)
+      color: b3f293
+    - name: category/operations
+      description: Issues related to operations
+      color: c5def5
+    - name: category/performance
+      description: Issues related to performance
+      color: e99695
+    - name: category/project-management
+      description: Issues relating to project management
+      color: f9d0c4
+    - name: category/repository
+      description: Issues related to repository configuration (CODEOWNERS, PR templates, ...)
+      color: 1d76db
+    - name: category/security
+      description: Issues related to security
+      color: fbca04
+    - name: category/standardization
+      description: Issues related to standardization
+      color: 62f7e6
+    - name: category/technical-debt
+      description: Issues related to technical debt
+      color: 1d76db
+    - name: category/testing
+      description: Issues related to testing
+      color: 8057c6
+    - name: category/ux
+      description: Issues related to user experience
+      color: 7d86ce
+    - name: customer
+      description: Issues that were reported by customers.
+      color: 7ff4eb
+    - name: dependencies
+      description: Pull requests from dependency-bumps.
+      color: 0366d6
+    - name: automerge
+      description: Pull requests to be auto merged.
+      color: 0366d6
+    - name: estimation/small
+      description: 'Estimation size: small (1 pt)'
+      color: fbca04
+    - name: estimation/medium
+      description: 'Estimation size: medium (3 pt)'
+      color: fbca04
+    - name: estimation/large
+      description: 'Estimation size: small (5-8 pt)'
+      color: fbca04
+    - name: type/feature-request
+      description: 'Issues that are feature requests'
+      color: c2e0c6
+    - name: type/bug
+      description: 'Issues that are bugs'
+      color: c66fe2
+    - name: type/question
+      description: 'Issues that are questions'
+      color: f7b879
+    - name: type/incident
+      description: 'Issues that are incidents'
+      color: f799ed
+    - name: status/stale
+      description: 'Issues that have not been touched in a while'
+      color: 44ceb9
+    - name: status/rejected
+      description: 'Issues that have been rejected'
+      color: a8b9ea
+    - name: status/needs-triage
+      description: 'Issues that need more information or discovery'
+      color: 3e79a5
+    - name: status/blocked
+      description: 'Issues that are currently blocked'
+      color: 006b75
+    - name: maturity/preview
+      description: 'Issues relating to preview features'
+      color: d8690f
+    - name: maturity/stable
+      description: 'Issues relating to stable features'
+      color: bff5ff
+
+# Teams: define access via GitHub orga teams
+# teams:
+#   - name: devs
+#     permission: admin
+#   - name: all-members
+#     permission: pull
+
+collaborators: []

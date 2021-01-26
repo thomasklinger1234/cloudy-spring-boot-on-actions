@@ -1,0 +1,25 @@
+---
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v2.1.0
+  hooks:
+    - id: trailing-whitespace
+    - id: check-added-large-files
+    - id: check-case-conflict
+    - id: check-merge-conflict
+    - id: check-symlinks
+    - id: check-json
+    - id: check-yaml
+    - id: check-executables-have-shebangs
+    - id: detect-private-key
+    - id: end-of-file-fixer
+    - id: no-commit-to-branch
+      args: ['--branch', 'main']
+
+- repo: https://github.com/gherynos/pre-commit-java
+  rev: master
+  hooks:
+    - id: pmd
+      exclude: /test/
+    - id: checkstyle
+      exclude: /test/

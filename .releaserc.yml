@@ -1,0 +1,33 @@
+---
+branches:
+  - name: main
+tagFormat: "v${version}"
+
+plugins:
+  - - "@semantic-release/commit-analyzer"
+    - releaseRules:
+        - type: docs
+          release: patch
+        - type: refactor
+          release: patch
+        - type: revert
+          release: patch
+        - type: test
+          release: patch
+  - "@semantic-release/release-notes-generator"
+  - "@semantic-release/changelog"
+  - - "@semantic-release/exec"
+    - verifyReleaseCmd: "if [ -e ./ci/verify_release.sh ]; then ./ci/verify_release.sh ${nextRelease.version}; fi"
+      publishCmd: "if [ -e ./ci/publish.sh ]; then ./ci/publish.sh; fi"
+  - - "@semantic-release/git"
+    - assets:
+        - CHANGELOG.md
+  - - "@semantic-release/github"
+    - assets:
+        - "*/**"
+      successComment: ":tada: This issue has been resolved in version ${nextRelease.version}"
+      failComment: "latest release has failed"
+      failTitle: The automated release is failing 🚨
+      labels: ["semantic-release"]
+      assignees: ["otto-ec/si"]
+      releasedLabels: ["released"]
