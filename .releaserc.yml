@@ -24,7 +24,7 @@ plugins:
         - CHANGELOG.md
   - - "@semantic-release/github"
     - assets:
-        - "*/**"
+        - CHANGELOG.md
       successComment: ":tada: This issue has been resolved in version ${nextRelease.version}"
       failComment: "latest release has failed"
       failTitle: The automated release is failing 🚨
