@@ -11,6 +11,13 @@ The demo also includes usage of multiple automations apart from CI/CD such as:
 - Dependabot automation to keep your dependencies fresh
 - Semantic commits and PRs
 
+Once you cloned this repository, please run the following to ensure that git pre-commit checks are running (declared in `.pre-commit-config.yaml`):
+
+```
+pip install pre-commit
+pre-commit run --all-files
+```
+
 ## Usage
 
 - Build: `make application/build`
